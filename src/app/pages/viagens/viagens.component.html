@@ -1,0 +1,32 @@
+<!-- <app-header></app-header>
+
+<main>
+  <div id="lista-viagem">
+    <ng-container *ngFor="let viagem of minhasViagens">
+      <app-bloco-viagens
+        [viagem]="viagem"
+        (clickViagem)="nomeViagemClicada = $event"
+      ></app-bloco-viagens>
+    </ng-container>
+    <h3>A viagem clicada foi...{{ nomeViagemClicada }}</h3>
+  </div>
+</main> -->
+
+<app-header></app-header>
+
+<main>
+  <div id="lista-viagem">
+    <div class="container">
+      <div class="row">
+        <ng-container *ngFor="let resumo of meusResumos">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <app-resumo-viagem
+              (clickResumo)="navegar($event)"
+              [resumo]="resumo"
+            ></app-resumo-viagem>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,13 @@
+body {
+  background-image: url("../../../assets/img/plane.png");
+  width: 100%;
+}
+
+#lista-viagem {
+  white-space: pre-wrap;
+  padding: 20px;
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}

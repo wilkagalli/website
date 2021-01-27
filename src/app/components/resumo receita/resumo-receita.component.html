@@ -1,0 +1,19 @@
+<div (click)="clickResumo.emit(resumo)" class="row" class="um-resumo">
+  <div class="caixa-imagem">
+    <img class="imagem-resumo" [src]="resumo.img" />
+
+    <div class="caixa-camada">
+      <div class="camada"></div>
+      <div class="camada-lupa">
+        <img src="../../assets/img/lupa.png" />
+        <p>Ver mais...</p>
+      </div>
+    </div>
+  </div>
+
+  <figcaption class="caption">
+    <h5>{{ resumo.titulo }}</h5>
+    <p>{{ resumo.descricao }}</p>
+    <!-- <p>{{ resumo.id }}</p> -->
+  </figcaption>
+</div>

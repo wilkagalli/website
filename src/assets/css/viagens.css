@@ -1,0 +1,83 @@
+body {
+  background-image: url("../img/plane.png");
+  width: 100%;
+}
+
+#lista-viagem {
+  white-space: pre-wrap;
+  padding: 20px;
+}
+
+.uma-viagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.uma-viagem h2 {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 25px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.uma-viagem p {
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  /* text-align: center; */
+  color: rgb(78, 76, 76);
+  margin-top: 5px;
+  border: gray 1px solid;
+  padding: 5px;
+  /* background: linear-gradient(rgb(255, 243, 232), rgb(243, 209, 169)); */
+}
+
+.viagem-container {
+  border: 5px rgb(243, 215, 215) solid;
+  width: 65%;
+}
+.separador img {
+  width: 40px;
+  margin-right: 40px;
+}
+
+.desc-container {
+  width: 50%;
+}
+
+.desc-container div {
+  position: relative;
+}
+
+.desc-container p {
+  text-align: center;
+}
+
+.uma-viagem img {
+  width: 100%;
+}
+
+.separador {
+  text-align: center;
+  margin: 80px;
+}
+
+.botao-img {
+  position: absolute;
+  top: 89%;
+  left: 40%;
+  height: 40px;
+  width: 164px;
+  background: rgb(201, 220, 248);
+  border-radius: 8px;
+  font-family: "Nunito", sans-serif;
+
+  font-size: 15px;
+  color: rgb(78, 76, 76);
+}
+
+.botao-img:hover {
+  background: rgb(250, 215, 163);
+  transition: 1s;
+}

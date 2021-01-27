@@ -1,0 +1,68 @@
+.uma-receita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.uma-receita h2 {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 50px;
+  padding-bottom: 30px;
+}
+
+.uma-receita h3 {
+  color: rgb(235, 90, 114);
+  font-family: "Anton", sans-serif;
+  text-align: justify;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.uma-receita p {
+  font-family: "Nunito", sans-serif;
+  font-size: 19px;
+  text-align: left;
+  color: rgb(78, 76, 76);
+  margin: 20px;
+}
+
+.uma-receita p.descricao {
+  line-height: 20px;
+}
+
+.receita-container {
+  border: 5px rgb(243, 215, 215) solid;
+  width: 65%;
+}
+
+.separador img {
+  width: 40px;
+  margin-right: 40px;
+}
+
+.img-container {
+  width: 65%;
+}
+
+.img-container p {
+  text-align: left;
+}
+
+.uma-receita img {
+  width: 100%;
+}
+
+.details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.separador {
+  text-align: center;
+  margin: 80px;
+}
+
+.uma-receita {
+  margin-top: 20px;
+}

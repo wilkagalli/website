@@ -1,0 +1,16 @@
+footer {
+  background-color: black;
+  height: 100px;
+  color: white;
+  list-style: none;
+  align-items: center;
+}
+
+li {
+  display: inline-block;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}

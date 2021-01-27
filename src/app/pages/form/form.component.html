@@ -1,0 +1,74 @@
+
+  <main>
+    <section class="container">
+      <h2 id="titulo-form">Adicionar nova receita</h2>
+      <ul id="mensagens-erro"></ul>
+      <form id="form-adiciona">
+        <div class="grupo">
+          <label for="nome">Nome</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="digite o nome da sua receita"
+            class="campo"
+          />
+        </div>
+        <div class="grupo">
+          <label for="img">Imagem:</label>
+          <input
+            id="img"
+            name="img"
+            type="file"
+            placeholder="digite o peso do seu paciente"
+            class="campo campo-medio"
+          />
+        </div>
+        <div class="grupo">
+          <label for="info">Informações:</label>
+          <input
+            id="info"
+            name="info"
+            type="text"
+            placeholder="digite as Informações da sua receita: tempo de cozimento, preparo, rendimento..."
+            class="campo campo-medio"
+          />
+        </div>
+        <div class="grupo">
+          <label for="gordura">Descrição</label>
+          <input
+            id="receita"
+            type="text"
+            placeholder="digite uma Descrição"
+            class="campo campo-medio"
+          />
+        </div>
+        <div class="grupo">
+          <label for="ingredientes">Ingredientes</label>
+          <input
+            id="ingredientes"
+            type="text"
+            placeholder="digite aqui os ingredientes"
+            class="campo campo-medio"
+          />
+        </div>
+        <div class="grupo">
+          <label for="preparo">Modo de Preparo</label>
+          <input
+            id="preparo"
+            type="text"
+            placeholder="digite aqui o modo de preparo"
+            class="campo campo-medio"
+          />
+        </div>
+
+        <button id="adicionar-paciente" class="botao bto-principal">
+          Adicionar
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="jquery.js"></script>
+  <script src="form.js"></script>
+</body>

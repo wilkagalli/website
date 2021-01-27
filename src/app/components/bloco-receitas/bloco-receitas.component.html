@@ -1,0 +1,76 @@
+<div class="uma-receita">
+  <h2>{{ receita.nome }}</h2>
+  <div class="img-container">
+    <img [src]="receita.img" />
+    <p>{{ receita.informacoes }}</p>
+  </div>
+  <div class="receita-container">
+    <p>{{ receita.descricao }}</p>
+    <h3>INGREDIENTES</h3>
+    <p>{{ receita.ingredientes }}</p>
+    <h3>MODO DE PREPARO</h3>
+    <p>{{ receita.modoPreparo }}</p>
+  </div>
+</div>
+
+<div class="details">
+  <i (click)="addLike()" class="fa fa-heart-o fa-2x mr-2"> </i>
+  {{ receita.likes }}
+
+  <i
+    (click)="viewComments(longContent)"
+    class="fa fa-comment-o fa-2x mr-2 ml-2"
+  ></i
+  >{{ receita.comments.length }}
+</div>
+
+<div class="separador">
+  <img src="assets/img/separador1.png" />
+  <img src="assets/img/separador2.png" />
+  <img src="assets/img/separador3.png" />
+</div>
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Comentários</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngFor="let comment of receita.comments">
+      <p>{{ comment }}</p>
+    </ng-container>
+  </div>
+
+  <div class="modal-footer">
+    <textarea
+      #textarea
+      formControlName="viewComments"
+      class="form-control"
+    ></textarea>
+    <div class="input-group-append">
+      <button
+        [disabled]="viewComments.invalid"
+        type="submit"
+        class="btn btn-primary pull-left"
+        (click)="addComment(textarea)"
+      >
+        Publish
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="modal.close('Close click')"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>

@@ -1,0 +1,23 @@
+body {
+  background-image: url("../../../assets/img/macarrons.png");
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.pesquisa {
+  color: #bbb;
+}
+
+#lista-receita {
+  white-space: pre-wrap;
+  padding: 20px;
+}
+
+.container {
+  display: block;
+  padding-top: 30px;
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}

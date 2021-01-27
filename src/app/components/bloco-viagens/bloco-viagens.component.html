@@ -1,0 +1,74 @@
+<div class="uma-viagem">
+  <h2>{{ viagem.nome }}</h2>
+  <div class="desc-container">
+    <div class="img-container">
+      <img [src]="viagem.img" />
+      <button class="btn btn-light botao-img" (click)="enviaNome()">
+        Continue lendo...
+      </button>
+    </div>
+    <p>{{ viagem.descricao }}</p>
+  </div>
+</div>
+
+<div class="details">
+  <i (click)="addLike()" class="fa fa-heart-o fa-2x mr-2"> </i>
+  {{ viagem.likes }}
+
+  <i
+    (click)="viewComments(longContent)"
+    class="fa fa-comment-o fa-2x mr-2 ml-2"
+  ></i
+  >{{ viagem.comments.length }}
+</div>
+
+<div class="separador">
+  <img src="assets/img/separador-plane.png" />
+  <img src="assets/img/separador-cloud.png" />
+  <img src="assets/img/separador-plane.png" />
+</div>
+
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Comentários</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngFor="let comment of viagem.comments">
+      <p>{{ comment }}</p>
+    </ng-container>
+  </div>
+
+  <div class="modal-footer">
+    <textarea
+      #textarea
+      formControlName="viewComments"
+      class="form-control"
+    ></textarea>
+    <div class="input-group-append">
+      <button
+        [disabled]="viewComments.invalid"
+        type="submit"
+        class="btn btn-primary pull-left"
+        (click)="addComment(textarea)"
+      >
+        Publish
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="modal.close('Close click')"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>

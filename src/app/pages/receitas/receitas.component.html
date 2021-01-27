@@ -1,0 +1,41 @@
+<!-- <app-header></app-header>>
+
+<main>
+  <div id="lista-receita">
+    <ng-container *ngFor="let receita of minhasReceitas">
+      <app-bloco-receitas [receita]="receita"></app-bloco-receitas>
+    </ng-container>
+  </div>
+</main> -->
+<app-header></app-header>
+
+<div class="text-center container pesquisa">
+  <form>
+    <input
+      class="rounded"
+      type="search"
+      placeholder="search..."
+      autofocus
+      (keyup)="filter = $event.target.value"
+    />
+  </form>
+</div>
+
+<main>
+  <div id="lista-resumo">
+    <div class="container">
+      <div class="row">
+        <ng-container
+          *ngFor="let resumo of meusResumos | filterByDescription: filter"
+        >
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <ap-resumo-receita
+              (clickResumo)="navegar($event)"
+              [resumo]="resumo"
+            ></ap-resumo-receita>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</main>
