@@ -46,3 +46,18 @@ nav .active-link {
   width: 25px;
   height: 25px;
 }
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  .titulo {
+    font-size: 40px;
+  }
+}

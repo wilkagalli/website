@@ -3,6 +3,13 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .caixa {
   position: relative;
   width: 100%;
@@ -93,6 +100,7 @@ ul {
 .titulo {
   text-align: center;
 }
+
 .img-principal {
   width: 400px;
   border-radius: 10px;
@@ -102,4 +110,29 @@ ul {
 
 .img-1 {
   margin: 0 10px 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .titulo img {
+    width: 300px;
+  }
+
+  .caixa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-principal {
+    width: 240px;
+  }
+
+  .apresentacao {
+    padding: 25px;
+  }
+
+  .video {
+    width: 100%;
+  }
 }
